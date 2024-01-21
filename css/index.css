@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "fs_sura_sans";
+  src: url("../fonts/sura-sans/SuraSansVF.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fs_sura_sans_light";
+  src: url("../fonts/sura-sans/SuraSans-Fina.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fs_sura_sans_regular";
+  src: url("../fonts/sura-sans/SuraSans-Ligera.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fs_sura_sans_medium";
+  src: url("../fonts/sura-sans/SuraSans-Regular.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fs_sura_sans_bold";
+  src: url("../fonts/sura-sans/SuraSans-Negrita.otf") format("opentype");
+  font-style: normal;
+}
+
+:root {
+  --color-prim-black: #161618;
+  --color-prim-white: #EFF0F0;
+  --padd-x: 2.5rem;
+  --font-primary: "fs_sura_sans";
+  --max-width: 600px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: var(--font-primary), Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #353A41;
+  background-color: var(--color-prim-white);
+}
+
+/* UTILS */
+b {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+/* HEADER */
+.header {
+  background-image: url("../img/HERO.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-prim-white);
+  padding: 1.5rem var(--padd-x) 3rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.header::after {
+  content: "INVESTMENTS";
+  position: absolute;
+  top: 0;
+  right: var(--padd-x);
+  background-color: #fff;
+  color: var(--color-prim-black);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 5px 15px;
+  line-height: 1;
+}
+
+.header::before {
+  content: "";
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 45px;
+  margin-bottom: 4rem;
+}
+
+/* FOOTER */
+.footer-bar {
+  display: inline-block;
+  opacity: 0.2;
+  border: 1px solid #fff;
+}
+
+/* TITULOS */
+.title_h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-prim-white);
+}
+.title_h1_sub {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-prim-white);
+}
+
+.title_h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-prim-black);
+}
+
+.title_h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-prim-black);
+}
+.title_h6 {
+  font-size: 18px;
+}
+.title_h7 {
+  font-size: 14px;
+}
+.title_h8 {
+  font-size: 12px;
+}
+
+/* BANNERS */
+.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 300px;
+}
+
+.banner_welcome {
+  background-image: url('../img/banner-bienvenida.jpg');
+}
+.banner_account_status {
+  background-image: url('../img/banner-estado-cuenta.jpg');
+}
+
+/* ICONOS */
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.icon-lg {
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+  min-height: 55px;
+}
+
+.icon-sm {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+.icon_linkdin {
+  background-image: url('../img/icons/linkdin.svg');
+}
+
+.icon_instagram {
+  background-image: url('../img/icons/instagram.svg');
+}
+
+.icon_facebook {
+  background-image: url('../img/icons/facebook.svg');
+}
+
+.icon_twitter {
+  background-image: url('../img/icons/twitter.svg');
+}
+
+.icon_youtube {
+  background-image: url('../img/icons/youtube.svg');
+}
+
+.icon_corazon {
+  background-image: url('../img/icons/sustentabilidad.svg');
+}
+
+.icon_grafico {
+  background-image: url('../img/icons/grafico.svg');
+}
+
+.icon_grupo {
+  background-image: url('../img/icons/grupo.svg');
+}
+
+.icon_seguridad {
+  background-image: url('../img/icons/seguridad.svg');
+}
+
+.icon_home {
+  background-image: url('../img/icons/home.svg');
+}
+.icon_mail {
+  background-image: url('../img/icons/mail.svg');
+}
+.icon_call {
+  background-image: url('../img/icons/call.svg');
+}
+.icon_alert {
+  background-image: url('../img/icons/alerta.svg');
+}
