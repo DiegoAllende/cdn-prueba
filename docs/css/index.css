@@ -35,7 +35,6 @@
   --header-text: "INVESTMENTS";
   --footer-title: "Soluciones Globales | Asesoría Experta";
   --footer-subtitle: "FONDOS SURA SAF S.A.C. RUC 20510000138";
-  --link-linkedin: "https://pe.linkedin.com";
   --color-prim-black: #161618;
   --color-prim-white: #EFF0F0;
 }
@@ -174,6 +173,23 @@ b {
   display: inline-block;
   opacity: 0.2;
   border: 1px solid #fff;
+}
+
+/* HELP */
+.help_list {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.help_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
 /* TITULOS */

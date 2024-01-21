@@ -1,40 +1,49 @@
 class Header extends HTMLElement {
-    constructor() {
-      super();
-      this.title;
-      this.subtitle;
-    }
-  
-    static get observerAttributes() {
-      return ['title', 'subtitle'];
-    }
-  
-    attributeChangeCallback(nameAtr, oldValue, newValue) {
-      switch (nameAtr) {
-        case title:
-          this.title = newValue;
-          break;
-        default:
-          break;
-      }
-    }
-  
-    connectedCallback() {
-      this.innerHTML = `
-      <header class="header">
-        <p class="title_h1">${this.title}</p>
-      </header>
-      `;
+  constructor() {
+    super();
+    this.suptitle = "";
+    this.titles = "";
+    this.subtitle = "";
+  }
+
+  static get observedAttributes() {
+    return ['suptitle', 'titles', 'subtitle'];
+  }
+
+  attributeChangedCallback(nameAtr, oldValue, newValue) {
+    switch (nameAtr) {
+      case "suptitle":
+        this.suptitle = newValue;
+        break;
+      case "titles":
+        this.titles = newValue;
+        break;
+      case "subtitle":
+        this.subtitle = newValue;
+        break;
+      default:
+        break;
     }
   }
 
-  class Footer extends HTMLElement {
-    constructor() {
-      super();
-    }
-  
-    connectedCallback() {
-      this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
+      <header class="header">
+        <p class="title_h1">${this.suptitle}</p>
+        <p class="title_h1">${this.titles}</p>
+        <p class="title_h1">${this.subtitle}</p>
+      </header>
+      `;
+  }
+}
+
+class Footer extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
       <footer class="footer">
         <section class="footer_header"></section>
         <section class="footer_links">
@@ -57,8 +66,37 @@ class Header extends HTMLElement {
         </section>
       </footer>
       `;
-    }
   }
-  
-  window.customElements.define('header-app', Header);
-  window.customElements.define('footer-app', Footer);
+}
+
+class Help extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
+      <section class="help_list">
+        <section class="help_item">
+          <i class="icon icon_call"></i>
+          <b>Contact Center</b>
+          <p class="title_h7">572-7777 <br> Opción 2 (Lima) <br> o 0800-17800 (provincia)</p>
+        </section>
+        <section class="help_item">
+          <i class="icon icon_mail"></i>
+          <b>Correo electrónicio</b>
+          <p class="title_h7">servicioalcliente.sab@sura.pe</p>
+        </section>
+        <section class="help_item">
+          <i class="icon icon_home"></i>
+          <b>Sitio web</b>
+          <p class="title_h7">www.sura.pe </p>
+        </section>
+      </section>
+      `;
+  }
+}
+
+window.customElements.define('header-app', Header);
+window.customElements.define('footer-app', Footer);
+window.customElements.define('help-app', Help);
