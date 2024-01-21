@@ -29,11 +29,15 @@
 }
 
 :root {
-  --color-prim-black: #161618;
-  --color-prim-white: #EFF0F0;
-  --padd-x: 2.5rem;
   --font-primary: "fs_sura_sans";
   --max-width: 600px;
+  --padd-x: 2.5rem;
+  --header-text: "INVESTMENTS";
+  --footer-title: "Soluciones Globales | Asesoría Experta";
+  --footer-subtitle: "FONDOS SURA SAF S.A.C. RUC 20510000138";
+  --link-linkedin: "https://pe.linkedin.com";
+  --color-prim-black: #161618;
+  --color-prim-white: #EFF0F0;
 }
 
 * {
@@ -50,7 +54,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #353A41;
-  background-color: var(--color-prim-white);
+  background-color: #fff;
 }
 
 /* UTILS */
@@ -79,7 +83,7 @@ b {
 }
 
 .header::after {
-  content: "INVESTMENTS";
+  content: var(--header-text);
   position: absolute;
   top: 0;
   right: var(--padd-x);
@@ -102,6 +106,70 @@ b {
 }
 
 /* FOOTER */
+.footer {
+  background-color: var(--color-prim-black);
+  padding: 1.5rem var(--padd-x) 3rem;
+}
+
+.footer_header {
+  margin-bottom: 3rem;
+}
+
+.footer_header::before {
+  content: var(--footer-title);
+  color: var(--color-prim-white);
+  display: block;
+}
+
+.footer_header::after {
+  content: var(--footer-subtitle);
+  color: #98A4AE;
+  display: block;
+}
+
+.footer_links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_links_logo {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer_links_logo::before {
+  content: "";
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+  width: 110px;
+  height: 35px;
+}
+
+.footer_links_logo_img {
+  width: 100px;
+}
+
+.footer_links_logo_sura {
+  font-size: 12px;
+  font-weight: 700;
+  color: #98A4AE;
+  margin: auto 0;
+  text-decoration: none;
+}
+
+.footer_links_socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .footer-bar {
   display: inline-block;
   opacity: 0.2;
@@ -114,6 +182,7 @@ b {
   font-weight: 700;
   color: var(--color-prim-white);
 }
+
 .title_h1_sub {
   font-size: 22px;
   font-weight: 700;
@@ -131,12 +200,15 @@ b {
   font-weight: 700;
   color: var(--color-prim-black);
 }
+
 .title_h6 {
   font-size: 18px;
 }
+
 .title_h7 {
   font-size: 14px;
 }
+
 .title_h8 {
   font-size: 12px;
 }
@@ -152,6 +224,7 @@ b {
 .banner_welcome {
   background-image: url('../img/banner-bienvenida.jpg');
 }
+
 .banner_account_status {
   background-image: url('../img/banner-estado-cuenta.jpg');
 }
@@ -181,7 +254,7 @@ b {
   min-height: 28px;
 }
 
-.icon_linkdin {
+.icon_linkedin {
   background-image: url('../img/icons/linkdin.svg');
 }
 
@@ -220,12 +293,15 @@ b {
 .icon_home {
   background-image: url('../img/icons/home.svg');
 }
+
 .icon_mail {
   background-image: url('../img/icons/mail.svg');
 }
+
 .icon_call {
   background-image: url('../img/icons/call.svg');
 }
+
 .icon_alert {
   background-image: url('../img/icons/alerta.svg');
 }
