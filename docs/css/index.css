@@ -37,6 +37,10 @@
   --footer-subtitle: "FONDOS SURA SAF S.A.C. RUC 20510000138";
   --color-prim-black: #161618;
   --color-prim-white: #EFF0F0;
+  --bg-dark: #161618;
+  --bg-light: #fff;
+  --bg-regular: #EFF0F0;
+  --bg-medium: #E5E7E7;
 }
 
 * {
@@ -190,6 +194,23 @@ b {
   align-items: center;
   gap: 1rem;
   text-align: center;
+}
+
+/* TABLA TIPO1 */
+.table_type1 {
+  border: 2px solid #707372;
+  border-radius: 8px;
+  background-color: var(--color-prim-white);
+}
+
+.table_type1_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+}
+
+.table_type1_item:not(:last-child) {
+  border-bottom: 1px solid #707372;
 }
 
 /* TITULOS */
