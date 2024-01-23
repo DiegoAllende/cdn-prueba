@@ -29,9 +29,9 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header class="header">
-        <p class="title_h1">${this.suptitle}</p>
+        <p class="title_h1_sub">${this.suptitle}</p>
         <p class="title_h1">${this.titles}</p>
-        <p class="title_h1">${this.subtitle}</p>
+        <p class="title_h1_sub">${this.subtitle}</p>
       </header>
       `;
   }

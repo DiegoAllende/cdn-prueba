@@ -71,6 +71,7 @@ b {
 
 .link {
   text-decoration: underline;
+  color: inherit;
 }
 
 /* HEADER */
